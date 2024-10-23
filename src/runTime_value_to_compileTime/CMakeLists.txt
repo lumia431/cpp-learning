@@ -1,0 +1,5 @@
+# 查找当前目录下的源文件
+file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+# 生成可执行文件
+add_executable(runTime_value_to_compileTime ${SOURCES})

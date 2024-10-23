@@ -24,5 +24,9 @@ foreach(subdir ${SUBDIRS})
     endif()
 endforeach()
 
+# 设置文件变化时重新运行CMake配置
+file(GLOB_RECURSE CFG_FILES src/* CMakeLists.txt)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${CFG_FILES})
+
 # 外部库目录（可选）
 # add_subdirectory(lib)
